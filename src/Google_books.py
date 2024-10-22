@@ -24,6 +24,7 @@ class Google_books:
                 for book in data
             ]
         return ["No books of that genre found."]
+        pass
 
     def recommend_author(self, author):
         return "";
