@@ -1,16 +1,11 @@
 # @author Jenna Rigby
-# Handles the chatbot itself - input and output
-
-import sys
-import os
-
-# Add the parent directory to sys.path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Handles the chatbot itself - input and output, and calling methods
 
 from Recommendations import Recommendations
 
 class Chatbot:
     def __init__(this):
+        #Creates an instance of the Recommendations class: 
         this.Recommendations = Recommendations()
 
     def begin(this):
@@ -23,15 +18,16 @@ class Chatbot:
                 print("Thanks for participating! ")
                 break
 
-            #Retrieves books from the collection:
+            #Retrieves books from the API:
             books = this.Recommendations.recommend_genre(genre)
 
             print("\nHere are book recommendations of that genre:")
-            for book in books:
-                print(f"- {book}")
-
-
-
+            if not books:
+                print("Genre does not exist. Please try again")
+            else:
+                for book in books:
+                    print(f"- {book}")
+            print("\n")
 
 if __name__ == "__main__":
     chatbot = Chatbot()

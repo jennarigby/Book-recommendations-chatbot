@@ -1,5 +1,5 @@
 # @author Jenna Rigby
-# This class will handle communication with the Google Books API
+# This class will handle communication with the Google Books API and return the books
 
 # import sys
 # sys.path.append('../../')
