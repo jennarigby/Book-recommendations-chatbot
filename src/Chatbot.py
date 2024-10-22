@@ -1,3 +1,5 @@
+# @author Jenna Rigby
+# Handles the chatbot itself - input and output
 from src.Recommendations import Recommendations
 
 class Chatbot:
@@ -12,6 +14,14 @@ class Chatbot:
 
             if (genre == 'exit' or genre == 'EXIT'):
                 print("Thanks for participating! ")
+                break
+
+            #Retrieves books from the collection:
+            books = this.recommender.get_recommendations(genre)
+
+            print("\nHere are book recommendations of that genre:")
+            for book in books:
+                print(f"- {book}")
 
 
 
