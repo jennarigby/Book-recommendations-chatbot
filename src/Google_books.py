@@ -1,6 +1,10 @@
 # @author Jenna Rigby
 # This class will handle communication with the Google Books API
 
+# import sys
+# sys.path.append('../../')
+# import config
+
 import requests
 from config.Config import API_KEY, BASE_URL
 

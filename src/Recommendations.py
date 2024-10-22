@@ -1,6 +1,6 @@
 # @author Jenna Rigby
 # 
-from src.Google_books import Google_books
+from Google_books import Google_books
 
 class Recommendations:
     def __init__(self):
